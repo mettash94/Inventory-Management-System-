@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="396.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstScreen">
+   <children>
+      <Button layoutX="186.0" layoutY="88.0" mnemonicParsing="false" onAction="#onButtonAction" prefHeight="25.0" prefWidth="138.0" text="Click Me" textAlignment="CENTER" textFill="#78854b" />
+      <Label fx:id="TheLabel" layoutX="171.0" layoutY="63.0" prefHeight="17.0" prefWidth="167.0" text="Click the Button!!" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartFormController">
+
+    <children>
+        <Label layoutX="50.0" layoutY="36.0" text="MODIFY PART">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="InHouseRadioModify" layoutX="267.0" layoutY="37.0" mnemonicParsing="false" onAction="#ActionInHouseIsSelected" text="InHouse">
+         <toggleGroup>
+            <ToggleGroup fx:id="InHouseOrOutSourced" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="OutSourcedModifyRadio" layoutX="417.0" layoutY="37.0" mnemonicParsing="false" onAction="#ActionOutSourcedIsSelected" text="Out Sourced" toggleGroup="$InHouseOrOutSourced" />
+
+        <Text layoutX="79.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Text>
+        <Text layoutX="79.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="82.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" wrappingWidth="22.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="77.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="79.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <TextField fx:id="partModifyInputID" disable="true" editable="false" layoutX="138.0" layoutY="105.0" />
+        <TextField fx:id="partModifyInputName" layoutX="138.0" layoutY="141.0" />
+        <TextField fx:id="partInputModifyInv" layoutX="138.0" layoutY="176.0" />
+        <TextField fx:id="partInputModifyPrice" layoutX="138.0" layoutY="210.0" />
+        <TextField fx:id="InputMachineOrCompany" layoutX="172.0" layoutY="282.0" />
+        <TextField fx:id="partModifyInputMin" layoutX="375.0" layoutY="244.0" />
+        <Text layoutX="332.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="LabelMachineOrCompany" layoutX="56.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <TextField fx:id="partInputModifyMax" layoutX="138.0" layoutY="244.0" />
+        <Button fx:id="ModifyPartSaveButton" layoutX="332.0" layoutY="331.0" mnemonicParsing="false" onAction="#ActionSaveModifyPart" text="SAVE" />
+        <Button fx:id="ModifyPartCancelButton" layoutX="395.0" layoutY="331.0" mnemonicParsing="false" onAction="#ActionCancelModifyPart" text="CANCEL" />
+    </children>
+
+</AnchorPane>

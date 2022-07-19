@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="556.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductFormController">
+    <children>
+        <Label layoutX="50.0" layoutY="36.0" text="Add Product">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Text layoutX="79.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Text>
+        <Text layoutX="79.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="82.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" wrappingWidth="22.0">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="77.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="79.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <TextField fx:id="inputProductID" disable="true" editable="false" layoutX="138.0" layoutY="105.0" />
+        <TextField fx:id="inputProductName" layoutX="138.0" layoutY="141.0" />
+        <TextField fx:id="inputProductInv" layoutX="138.0" layoutY="176.0" />
+        <TextField fx:id="inputProductPrice" layoutX="138.0" layoutY="210.0" />
+        <TextField fx:id="inputProductMax" layoutX="138.0" layoutY="244.0" />
+        <TextField fx:id="inputProductMin" layoutX="138.0" layoutY="286.0" />
+        <Text layoutX="81.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+
+        <Button fx:id="AddProductSaveButton" layoutX="496.0" layoutY="511.0" mnemonicParsing="false" onAction="#ActionSaveProductData" text="SAVE" />
+        <Button fx:id="CancelButton" layoutX="574.0" layoutY="511.0" mnemonicParsing="false" onAction="#ActionCancelProduct" text="CANCEL" />
+
+        <TableView fx:id="AllPartsTable" layoutX="384.0" layoutY="54.0" prefHeight="182.0" prefWidth="335.0">
+            <columns>
+                <TableColumn fx:id="PartIDColumn" prefWidth="70.0" text="PartID" />
+                <TableColumn fx:id="PartNameColumn" prefWidth="75.0" text="PartName" />
+                <TableColumn fx:id="PartInvColumn" prefWidth="95.0" text="Inventory Level" />
+                <TableColumn fx:id="PartPriceColumn" prefWidth="100.0" text="Price per Unit" />
+            </columns>
+        </TableView>
+      <TableView fx:id="AssociatedPartsTable" layoutX="384.0" layoutY="278.0" prefHeight="182.0" prefWidth="335.0">
+         <columns>
+            <TableColumn fx:id="AssociatedPartID" prefWidth="70.0" text="PartID" />
+            <TableColumn fx:id="AssociatedPartName" prefWidth="75.0" text="PartName" />
+            <TableColumn fx:id="AssociatedPartInv" prefWidth="95.0" text="Inventory Level" />
+            <TableColumn fx:id="AssociatedPartPrice" prefWidth="100.0" text="Price per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="RemoveButton" layoutX="580.0" layoutY="469.0" mnemonicParsing="false" onAction="#ActionRemoveAssociatedPart" text="Remove Associated Part" />
+      <Button fx:id="AddPartButton" layoutX="671.0" layoutY="243.0" mnemonicParsing="false" onAction="#ActionAddPartToAssociatedPart" text="ADD" />
+      <TextField fx:id="SearchPartButton" layoutX="505.0" layoutY="14.0" onAction="#ActionSearchPart" promptText="Search Name or ID" />
+    </children>
+
+</AnchorPane>
